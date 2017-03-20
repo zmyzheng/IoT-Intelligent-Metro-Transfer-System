@@ -23,7 +23,7 @@ Week 6: Data Visualization & basic web development: Django.
 
 
 
-# This directory contains source files for your Lab Project.
+# This directory contains source files for the Lab Project.
 
 Lab 3: Acquiring and Cleaning NYC MTA Subway Data in a DynamoDB table.
 
