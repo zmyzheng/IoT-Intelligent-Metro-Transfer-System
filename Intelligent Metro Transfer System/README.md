@@ -13,7 +13,7 @@ Week 5: Using historical data to enable decision making (Amazon S3, Machine Lear
 Week 6: Data Visualization & basic web development: Django.
 
 
-(tools: AWS Cognito, DynamoDB, Kinesis, S3, Machine Learning, Lambda, SNS, Intel Edison)
+# tools: AWS Cognito, DynamoDB, Kinesis, S3, Machine Learning, Lambda, SNS, Intel Edison
 
 § Acquired real-time MTA Data stream of the arrival and departure times of each subway at each station from NYC MTA
 
@@ -23,7 +23,7 @@ Week 6: Data Visualization & basic web development: Django.
 
 
 
-This directory contains source files for your Lab Project.
+# This directory contains source files for your Lab Project.
 
 Lab 3: Acquiring and Cleaning NYC MTA Subway Data in a DynamoDB table.
 
