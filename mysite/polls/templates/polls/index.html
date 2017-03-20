@@ -1,0 +1,140 @@
+
+
+<html>
+  <head>
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   <script type="text/javascript">
+      google.charts.load('current', {'packages':['gauge','corechart']});
+      google.charts.setOnLoadCallback(drawChart1);
+      google.charts.setOnLoadCallback(drawChart2);
+      google.charts.setOnLoadCallback(drawBasic);
+
+      function drawChart1() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['Temperature', Number(document.getElementById(4).innerHTML)],
+          
+        ]);
+
+        var options = {
+          width: 200, height: 200,
+          redFrom: 28, redTo: 30,
+          yellowFrom:26, yellowTo: 28,
+          minorTicks: 5,
+          max: 30,
+          min:20
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById('chart_div1'));
+
+        chart.draw(data, options);
+
+        var i = 0
+        setInterval(function() {
+          data.setValue(0, 1, Number(document.getElementById(i%5).innerHTML));
+          i++;
+          if(i == 5) i = 0;
+          chart.draw(data, options);
+        }, 3000);
+        
+      }
+      function drawChart2() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['Minutes ago', 0],
+          
+        ]);
+
+        var options = {
+          width: 200, height: 200,
+          
+          minorTicks: 1,
+          max: 4,
+          min: 0
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById('chart_div2'));
+
+        chart.draw(data, options);
+
+        var i = 4
+        setInterval(function() {
+          data.setValue(0, 1, i);
+          i--;
+          if(i == -1) i = 4;
+          chart.draw(data, options);
+        }, 3000);
+        
+      }
+
+      
+
+	function drawBasic() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Minutes ago');
+      data.addColumn('number', 'Temperature');
+
+      data.addRows([
+        
+        [-4, Number(document.getElementById(0).innerHTML)],
+        [-3, Number(document.getElementById(1).innerHTML)],
+        [-2, Number(document.getElementById(2).innerHTML)],
+        [-1, Number(document.getElementById(3).innerHTML)],
+        [0, Number(document.getElementById(4).innerHTML)],
+        
+      ]);
+      
+      
+
+	       
+	  
+
+      var options = {
+        title: 'Temperature of the Day',
+        hAxis: {
+          title: 'Minutes ago',
+
+          
+        },
+        vAxis: {
+          title: 'temprature (Celsius)'
+        }
+      };
+
+      var chart = new google.visualization.ColumnChart(
+        document.getElementById('chart_div3'));
+
+      chart.draw(data, options);
+    }
+
+    </script>
+  </head>
+  <body>
+  	<table >
+	  <tr>
+	    <th><div id="chart_div1" style="width: 200px; height: 200px;"></div></th>
+	    <th><div id="chart_div2" style="width: 200px; height: 200px;"></div></th>
+	  </tr>
+	</table>
+    
+    
+
+    <div id="chart_div3" style="width: 600px; height: 400px;">
+    </div>
+
+    <div>
+    {% if temperature_list %}
+	    
+	    {% for idx, t in temperature_list %}
+	        <div id={{idx}}>{{t.temperature}}</div>
+	    {% endfor %}
+	    
+	{% else %}
+	    <p>No polls are available.</p>
+	{% endif %}
+    </div>
+  </body>
+</html>
