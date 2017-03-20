@@ -1,0 +1,32 @@
+{
+    "attributes": [
+        {
+            "attributeName": "minute",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "weekday",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "local",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "express",
+            "attributeType": "NUMERIC"
+        },
+        
+        {
+            "attributeName": "trainingLabel",
+            "attributeType": "BINARY"
+        }
+    ],
+    "dataFileContainsHeader": true,
+    "dataFormat": "CSV",
+    "excludedAttributeNames": [],
+    
+    "rowWeight": null,
+    "targetAttributeName": "trainingLabel",
+    "version": "1.0"
+}
