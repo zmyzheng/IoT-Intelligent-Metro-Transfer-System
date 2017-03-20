@@ -1,5 +1,12 @@
 # EECS6765 Spring 2017
 
+Week 1: Embedded Programming on the Intel Edison
+Week 2: Intro to Cloud Computing (AWS Kinesis)
+Week 3: Working with Data Scraping & Acquisition (Protocol Buffers, DynamoDB)
+Week 4: Basic Signal/Data Processing and Notification Mechanisms (Amazon SNS)
+Week 5: Using historical data to enable decision making (Amazon S3, Machine Learning & AWS Lambda)
+Week 6: Data Visualization & basic web development: Django.
+
 This directory contains source files for your Lab Project.
 
 Lab 3: Acquiring and Cleaning NYC MTA Subway Data in a DynamoDB table.
