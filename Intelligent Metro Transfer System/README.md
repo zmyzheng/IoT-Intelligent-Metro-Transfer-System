@@ -4,7 +4,7 @@ Week 1: Embedded Programming on the Intel Edison
 
 Week 2: Intro to Cloud Computing (AWS Kinesis)
 
-Week 3: Working with Data Scraping & Acquisition (Protocol Buffers, DynamoDB)
+Week 3: Working with Data Scraping & Acquisition (Protocol Buffers, DynamoDB, GTFS Realtime, Multithreading)
 
 Week 4: Basic Signal/Data Processing and Notification Mechanisms (Amazon SNS)
 
