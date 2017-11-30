@@ -1,6 +1,4 @@
-# iot
-
-Intelligent Metro Transfer System
+# iot - Intelligent Metro Transfer System
 
 (AWS Cognito, DynamoDB, Kinesis, S3, Machine Learning, Lambda, SNS, Intel Edison)
 
@@ -12,6 +10,7 @@ Intelligent Metro Transfer System
 
 ![](CartoonLabOverview.JPG)
 ![](LabProjectOverview.JPG)
+
 The purpose of this project is to become familiar with the full IoT stack, which comprises of a hardware and a cloud layer. This project will utilize the Intel Edison with multiple sensors and actuators, WiFi and BLE connectivity, and Amazon Web Services to build a connected subway system that can optimize subway rides. 
 
 
